@@ -13,4 +13,47 @@ class Incident extends Model {
         'description'
     ];
 
+    /*
+    ===========
+    Scopes
+    ===========
+    */
+
+    public function scopeMappable($query)
+    {
+        return $query->whereHas('location', function($query){
+           $query->whereNotNull('latitude')->whereNotNull('longitude');
+        });
+    }
+
+
+    /*
+    ===========
+    Relationships
+    ===========
+    */
+
+    public function location()
+    {
+        return $this->belongsTo('Blotter\Location\Location');
+    }
+
+    public function people()
+    {
+        return $this->hasMany('Blotter\Person\Person');
+    }
+
+    /*
+    ===========
+    Setters
+    ===========
+    */
+
+
+    /*
+    ===========
+    Getters
+    ===========
+    */
+
 }

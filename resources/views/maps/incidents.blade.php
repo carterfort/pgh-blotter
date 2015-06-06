@@ -41,17 +41,7 @@
         return Math.random() * 2/miles_per_long - 1/miles_per_long;
     }
 
-    var data = [];
-    var miles_per_long = 69;
-    lat = 40.4397;
-    long = -79.9764;
-    for (var i=0; i<100; i++) {
-        lat += rand_lat_diff();
-        long += rand_long_diff();
-        data.push(
-            {'location': [lat, long], 'people': ['mary', 'tom', 'sue']}
-        );
-    };
+    var data = {!!$incidents->toJson()!!};
 
 
     // Actually Render the Map
@@ -71,7 +61,18 @@
     }).addTo(map);
 
     for (var i=0; i<data.length; i++) {
-        L.marker(data[i]['location'], {icon: marker_icon}).addTo(map);
+        var latitude = parseFloat(data[i].location.latitude);
+        var longitude = parseFloat(data[i].location.longitude);
+
+        if ( (isNaN(latitude) || isNaN(longitude)) || latitude == 0 || longitude == 0 ) continue;
+
+        var coordinates = {
+            lat:  latitude,
+            lng: longitude
+        };
+
+        var marker = L.marker(coordinates, {icon: marker_icon});
+        marker.addTo(map);
     }
 
   </script>

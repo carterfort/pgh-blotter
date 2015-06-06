@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+  </head>
+
+  <body>
+    <style>
+      #map { height: 500px; }
+    </style>
+
+    <h1>PGH Blotter</h1>
+    <div id="map"></div>
+  </body>
+
+  <!-- Leaflet Script -->
+  <script>
+
+    var map = L.map('map').setView([40.4397, -79.9764], 10);
+
+    var attribution = '<p style="font-size:0.6rem">Map tiles by <a href="http://stamen.com">Stamen Design</a>, ' +
+      'under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> license. ' +
+      'Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, ' +
+      'under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a> license.</p>'
+
+    L.tileLayer('http://{s}.sm.mapstack.stamen.com/terrain/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; ' + attribution,
+        maxZoom: 18,
+    }).addTo(map);
+  </script>
+
+</html>

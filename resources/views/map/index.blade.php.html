@@ -7,6 +7,7 @@
   <body>
     <style>
       #map { height: 500px; }
+    .my-div-icon { border: 1px solid black; border-radius: 50%; height: 10px; width: 10px; background: red;}
     </style>
 
     <h1>PGH Blotter</h1>
@@ -20,18 +21,18 @@
 
     function rand_lat_diff() {
         var miles_per_lat = 53;
-        return Math.random() * (1/miles_per_lat - (-1/miles_per_lat)) + 1/miles_per_lat;
+        return Math.random() * 2/miles_per_lat - 1/miles_per_lat;
     }
     function rand_long_diff() {
         var miles_per_long = 69;
-        return Math.random() * (1/miles_per_long - (-1/miles_per_long)) + 1/miles_per_long;
+        return Math.random() * 2/miles_per_long - 1/miles_per_long;
     }
 
     var data = [];
     var miles_per_long = 69;
     lat = 40.4397;
     long = -79.9764;
-    for (var i=0; i<1000; i++) {
+    for (var i=0; i<100; i++) {
         lat += rand_lat_diff();
         long += rand_long_diff();
         data.push(
@@ -44,6 +45,7 @@
     //////////////////////////
 
     var map = L.map('map').setView([40.4397, -79.9764], 10);
+    var myIcon = L.divIcon({className: 'my-div-icon', iconSize: [8, 8]});
 
     var attribution = '<p style="font-size:0.6rem">Map tiles by <a href="http://stamen.com">Stamen Design</a>, ' +
       'under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> license. ' +
@@ -55,7 +57,10 @@
         maxZoom: 18,
     }).addTo(map);
 
-    console.log(data);
+    for (var i=0; i<data.length; i++) {
+        L.marker(data[i]['location'], {icon: myIcon}).addTo(map);
+    }
+
   </script>
 
 </html>

@@ -19,8 +19,8 @@ class CreateLocation extends Migration {
 			$table->string('address');
 			$table->string('neighborhood');
 			$table->string('zone');
-            $table->decimal('latitude', 10, 6);
-            $table->decimal('longitude', 10, 6);
+            $table->decimal('latitude', 10, 8)->nullable();
+            $table->decimal('longitude', 10, 8)->nullable();
             $table->timestamps();
 		});
 	}

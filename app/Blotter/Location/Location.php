@@ -9,7 +9,9 @@ class Location extends Model {
     protected $fillable = [
         'address',
         'neighborhood',
-        'zone'
+        'zone',
+        'latitude',
+        'longitude'
     ];
 
 }

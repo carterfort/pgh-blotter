@@ -2,28 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12968d04-46e9-4250-a0f6-415e1e3ba23b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/CSVHandlerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/factories/factories.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Blotter/Scraper/StoresWeeklyData.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/arrest_blotter_Monday.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2015_06_06_164727_create_incidents_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2015_06_06_164741_create_incidents_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2015_06_06_164805_create_locations_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2015_06_06_164812_create_locations_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2015_06_06_164820_create_people_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/ExampleTest.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Blotter/Scraper/FetchesCSVForDay.php" afterPath="$PROJECT_DIR$/app/Blotter/Scraper/FetchesCSVForDay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Blotter/Incident/Incident.php" afterPath="$PROJECT_DIR$/app/Blotter/Incident/Incident.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/GeocodeTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Blotter/GeocodeAPI/Geocoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/cfort.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_02_02_005847_create_location.php" afterPath="$PROJECT_DIR$/database/migrations/2015_02_02_005847_create_location.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Console/Kernel.php" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Blotter/Location/Location.php" afterPath="$PROJECT_DIR$/app/Blotter/Location/Location.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Blotter/Person/Person.php" afterPath="$PROJECT_DIR$/app/Blotter/Person/Person.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Commands/Blotter/Scraper/ScrapesPoliceCSV.php" afterPath="$PROJECT_DIR$/app/Commands/Blotter/Scraper/ScrapesPoliceCSV.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/TestCase.php" afterPath="$PROJECT_DIR$/tests/TestCase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/blotter.iml" afterPath="$PROJECT_DIR$/.idea/blotter.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blotter.iws" />
@@ -47,36 +32,18 @@
     <favorites_list name="blotter" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.50390625">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="ScrapesPoliceCSV.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/Commands/Blotter/Scraper/ScrapesPoliceCSV.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.64314246" vertical-offset="276" max-vertical-offset="1058">
-                  <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="CSVHandlerTest.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/CSVHandlerTest.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.551265" vertical-offset="0" max-vertical-offset="751">
-                  <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="GeocodeAllUngeocodedAddressesCommand.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Console/Commands/GeocodeAllUngeocodedAddressesCommand.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.36751" vertical-offset="1288" max-vertical-offset="2760">
+              <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -86,17 +53,14 @@
       <list>
         <option value="$PROJECT_DIR$/database/migrations/2015_02_06_005235_create_incident.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_02_06_010205_create_people.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2015_02_02_005847_create_location.php" />
         <option value="$PROJECT_DIR$/app/Blotter/Scraper/StoresWeeklyData.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/FetchThisWeekCommand.php" />
-        <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
         <option value="$PROJECT_DIR$/app/Blotter/Scraper/FetchesCSVForDay.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/database/migrations/2015_06_06_164820_create_people_table.php" />
         <option value="$PROJECT_DIR$/tests/factories/factories.php" />
         <option value="$PROJECT_DIR$/tests/ExampleTest.php" />
-        <option value="$PROJECT_DIR$/app/Blotter/Location/Location.php" />
         <option value="$PROJECT_DIR$/app/Blotter/Incident/Incident.php" />
         <option value="$PROJECT_DIR$/app/Blotter/Person/Person.php" />
         <option value="$PROJECT_DIR$/tests/TestCase.php" />
@@ -104,6 +68,16 @@
         <option value="$PROJECT_DIR$/app/Blotter/Scraper/HandlesCSVForDay.php" />
         <option value="$PROJECT_DIR$/tests/CSVHandlerTest.php" />
         <option value="$PROJECT_DIR$/app/Commands/Blotter/Scraper/ScrapesPoliceCSV.php" />
+        <option value="$PROJECT_DIR$/app/Blotter/Geocode/Geocode.php" />
+        <option value="$PROJECT_DIR$/app/Blotter/Geocode/GeocodeAddressUsingLocalData.php" />
+        <option value="$PROJECT_DIR$/app/Blotter/Geocode/DataSource.php" />
+        <option value="$PROJECT_DIR$/tests/GeocodeTest.php" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/GeocodeAllUngeocodedAddresses.php" />
+        <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_02_02_005847_create_location.php" />
+        <option value="$PROJECT_DIR$/app/Blotter/GeocodeAPI/Geocoder.php" />
+        <option value="$PROJECT_DIR$/app/Blotter/Location/Location.php" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/GeocodeAllUngeocodedAddressesCommand.php" />
       </list>
     </option>
   </component>
@@ -204,6 +178,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blotter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="police-blotter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blotter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="police-blotter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -222,7 +228,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Commands" />
+              <option name="myItemId" value="Console" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -240,7 +246,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Commands" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blotter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="police-blotter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -269,10 +293,6 @@
               <option name="myItemId" value="Blotter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scraper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -292,51 +312,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Person" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blotter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="police-blotter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blotter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Location" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blotter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="police-blotter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blotter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Incident" />
+              <option name="myItemId" value="GeocodeAPI" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -411,7 +387,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32421875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32421875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -490,21 +466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4900133" vertical-offset="0" max-vertical-offset="782">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding>
-            <marker date="1433614276000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1433614276000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433614276000" expanded="true" signature="-1:-1" placeholder=" The Artisan commands provided by your application. ..." />
-            <marker date="1433614276000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433614276000" expanded="true" signature="-1:-1" placeholder=" Define the application's command schedule. ..." />
-            <marker date="1433614276000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33688414" vertical-offset="0" max-vertical-offset="1242">
@@ -571,17 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Blotter/Location/Location.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45938748" vertical-offset="0" max-vertical-offset="751">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <marker date="1433615929000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433615929000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Blotter/Person/Person.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33688414" vertical-offset="0" max-vertical-offset="751">
@@ -629,14 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/CSVHandlerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.551265" vertical-offset="0" max-vertical-offset="751">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Blotter/Scraper/HandlesCSVForDay.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48601863" vertical-offset="1084" max-vertical-offset="2254">
@@ -666,10 +608,116 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Commands/Blotter/Scraper/ScrapesPoliceCSV.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30625832" vertical-offset="276" max-vertical-offset="1058">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+          <folding>
+            <marker date="1433617897000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1433617897000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433617897000" expanded="true" signature="-1:-1" placeholder=" Execute the command. ..." />
+            <marker date="1433617897000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433617897000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433617897000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CSVHandlerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64314246" vertical-offset="0" max-vertical-offset="751">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <marker date="1433617839000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1433617839000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433617839000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/GeocodeTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64314246" vertical-offset="0" max-vertical-offset="751">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding>
+            <marker date="1433624727000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433624727000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433624727000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433624727000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Console/Command.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.122503325" vertical-offset="0" max-vertical-offset="8855">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding>
+            <marker date="1433609410000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" The Laravel application instance. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" The input interface implementation. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" The output interface implementation. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" The console command name. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" The console command description. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Create a new console command instance. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Specify the arguments and options on the command. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Run the console command. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Execute the console command. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Call another console command. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Call another console command silently. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Get the value of a command argument. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Get the value of a command option. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Confirm a question with the user. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Prompt the user for input. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Prompt the user for input with auto completion. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Prompt the user for input but hide the answer from the console. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Give the user a single choice from an array of answers. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Format input to textual table. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Write a string as information output. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Write a string as standard output. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Write a string as comment output. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Write a string as question output. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Write a string as error output. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Get the console command arguments. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Get the console command options. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Get the output implementation. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Get the Laravel application instance. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder=" Set the Laravel application instance. ..." />
+            <marker date="1433609410000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Commands/FetchThisWeekCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.551265" vertical-offset="667" max-vertical-offset="1863">
-          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.122503325" vertical-offset="0" max-vertical-offset="1863">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
           <folding>
             <marker date="1433614257000" expanded="false" signature="-1:-1" placeholder="..." />
             <marker date="1433614257000" expanded="true" signature="-1:-1" placeholder="..." />
@@ -690,10 +738,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Commands/Blotter/Scraper/ScrapesPoliceCSV.php">
+    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64314246" vertical-offset="276" max-vertical-offset="1058">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.42876166" vertical-offset="0" max-vertical-offset="805">
+          <caret line="15" column="67" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
+          <folding>
+            <marker date="1433625162000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1433625162000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433625162000" expanded="true" signature="-1:-1" placeholder=" The Artisan commands provided by your application. ..." />
+            <marker date="1433625162000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433625162000" expanded="true" signature="-1:-1" placeholder=" Define the application's command schedule. ..." />
+            <marker date="1433625162000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_02_02_005847_create_location.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64314246" vertical-offset="0" max-vertical-offset="1012">
+          <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+          <folding>
+            <marker date="1433625197000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1433625197000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433625197000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
+            <marker date="1433625197000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433625197000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433625197000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433625197000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
+            <marker date="1433625197000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Blotter/GeocodeAPI/Geocoder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57123834" vertical-offset="606" max-vertical-offset="1380">
+          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+          <folding>
+            <marker date="1433625345000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433625345000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433625345000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433625345000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433625345000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433625345000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433625345000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Blotter/Location/Location.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3981358" vertical-offset="0" max-vertical-offset="751">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding>
+            <marker date="1433625454000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433625454000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/GeocodeAllUngeocodedAddressesCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36751" vertical-offset="1288" max-vertical-offset="2760">
+          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
           <folding />
         </state>
       </provider>

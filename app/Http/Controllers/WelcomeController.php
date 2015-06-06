@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+use App\Commands\Blotter\Scraper\ScrapesPoliceCSV;
+
 class WelcomeController extends Controller {
 
 	/*
@@ -15,8 +17,6 @@ class WelcomeController extends Controller {
 
 	/**
 	 * Create a new controller instance.
-	 *
-	 * @return void
 	 */
 	public function __construct()
 	{
@@ -30,7 +30,8 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('welcome');
+		$data = $this->dispatch(new ScrapesPoliceCSV());
+        dd($data);
 	}
 
 }

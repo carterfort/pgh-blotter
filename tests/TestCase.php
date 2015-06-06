@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
+
 class TestCase extends Illuminate\Foundation\Testing\TestCase {
 
 	/**
@@ -15,5 +17,18 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
 
 		return $app;
 	}
+
+    public function setUp()
+    {
+        parent::setUp();
+        DB::beginTransaction();
+
+    }
+
+    public function tearDown()
+    {
+        DB::rollback();
+        parent::tearDown();
+    }
 
 }

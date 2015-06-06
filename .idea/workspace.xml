@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12968d04-46e9-4250-a0f6-415e1e3ba23b" name="Default" comment="" />
+    <list default="true" id="12968d04-46e9-4250-a0f6-415e1e3ba23b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/CSVHandlerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/factories/factories.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Blotter/Scraper/StoresWeeklyData.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/arrest_blotter_Monday.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2015_06_06_164727_create_incidents_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2015_06_06_164741_create_incidents_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2015_06_06_164805_create_locations_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2015_06_06_164812_create_locations_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2015_06_06_164820_create_people_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/ExampleTest.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Blotter/Scraper/FetchesCSVForDay.php" afterPath="$PROJECT_DIR$/app/Blotter/Scraper/FetchesCSVForDay.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Blotter/Incident/Incident.php" afterPath="$PROJECT_DIR$/app/Blotter/Incident/Incident.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Console/Kernel.php" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Blotter/Location/Location.php" afterPath="$PROJECT_DIR$/app/Blotter/Location/Location.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Blotter/Person/Person.php" afterPath="$PROJECT_DIR$/app/Blotter/Person/Person.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Commands/Blotter/Scraper/ScrapesPoliceCSV.php" afterPath="$PROJECT_DIR$/app/Commands/Blotter/Scraper/ScrapesPoliceCSV.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/TestCase.php" afterPath="$PROJECT_DIR$/tests/TestCase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="blotter.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -23,29 +47,62 @@
     <favorites_list name="blotter" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ScrapesPoliceCSV.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Commands/Blotter/Scraper/ScrapesPoliceCSV.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66311586" vertical-offset="629" max-vertical-offset="1380">
-              <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.50390625">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="ScrapesPoliceCSV.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/Commands/Blotter/Scraper/ScrapesPoliceCSV.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.64314246" vertical-offset="276" max-vertical-offset="1058">
+                  <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="CSVHandlerTest.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tests/CSVHandlerTest.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.551265" vertical-offset="0" max-vertical-offset="751">
+                  <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/database/migrations/2015_02_06_005235_create_incident.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_02_06_010205_create_people.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_02_02_005847_create_location.php" />
-        <option value="$PROJECT_DIR$/app/Blotter/Incident/Incident.php" />
-        <option value="$PROJECT_DIR$/app/Blotter/Scraper/FetchesCSVForDay.php" />
         <option value="$PROJECT_DIR$/app/Blotter/Scraper/StoresWeeklyData.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/FetchThisWeekCommand.php" />
+        <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
+        <option value="$PROJECT_DIR$/app/Blotter/Scraper/FetchesCSVForDay.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_06_06_164820_create_people_table.php" />
+        <option value="$PROJECT_DIR$/tests/factories/factories.php" />
+        <option value="$PROJECT_DIR$/tests/ExampleTest.php" />
+        <option value="$PROJECT_DIR$/app/Blotter/Location/Location.php" />
+        <option value="$PROJECT_DIR$/app/Blotter/Incident/Incident.php" />
+        <option value="$PROJECT_DIR$/app/Blotter/Person/Person.php" />
+        <option value="$PROJECT_DIR$/tests/TestCase.php" />
+        <option value="$PROJECT_DIR$/arrest_blotter_Monday.csv" />
+        <option value="$PROJECT_DIR$/app/Blotter/Scraper/HandlesCSVForDay.php" />
+        <option value="$PROJECT_DIR$/tests/CSVHandlerTest.php" />
         <option value="$PROJECT_DIR$/app/Commands/Blotter/Scraper/ScrapesPoliceCSV.php" />
       </list>
     </option>
@@ -64,14 +121,14 @@
     <option name="width" value="1280" />
     <option name="height" value="773" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -101,7 +158,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="blotter" />
+              <option name="myItemId" value="police-blotter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -111,29 +168,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="blotter" />
+              <option name="myItemId" value="police-blotter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blotter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blotter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -143,7 +182,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="police-blotter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="blotter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="police-blotter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -157,47 +214,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="blotter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Console" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blotter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blotter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Console" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Commands" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blotter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blotter" />
+              <option name="myItemId" value="police-blotter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -215,7 +232,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="blotter" />
+              <option name="myItemId" value="police-blotter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -241,7 +258,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="blotter" />
+              <option name="myItemId" value="police-blotter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -263,7 +280,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="blotter" />
+              <option name="myItemId" value="police-blotter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -272,6 +289,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Blotter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Person" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blotter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="police-blotter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Blotter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Location" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blotter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="police-blotter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Blotter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Incident" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -307,10 +372,16 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -330,25 +401,25 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32421875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32421875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -375,25 +446,13 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30625832" vertical-offset="0" max-vertical-offset="1219">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="759" max-vertical-offset="966">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
           <folding>
-            <marker date="1433609464000" expanded="true" signature="-1:-1" placeholder="{&quot;name&quot;: &quot;laravel/laravel&quot;...}" />
-            <marker date="1433609464000" expanded="true" signature="-1:-1" placeholder="{&quot;laravel/framework&quot;: &quot;5.0.*&quot;...}" />
-            <marker date="1433609464000" expanded="true" signature="-1:-1" placeholder="{&quot;phpunit/phpunit&quot;: &quot;~4.0&quot;...}" />
-            <marker date="1433609464000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609464000" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1433609464000" expanded="true" signature="-1:-1" placeholder="{&quot;App\\&quot;: &quot;app/&quot;...}" />
-            <marker date="1433609464000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609464000" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1433609464000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609464000" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1433609464000" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1433609464000" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1433609464000" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1433609464000" expanded="true" signature="-1:-1" placeholder="{&quot;preferred-install&quot;: &quot;dist&quot;...}" />
+            <marker date="1433613939000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433613939000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -402,15 +461,84 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.551265" vertical-offset="0" max-vertical-offset="1058">
           <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33288947" vertical-offset="12262" max-vertical-offset="21298">
+          <caret line="547" column="20" selection-start-line="547" selection-start-column="20" selection-end-line="547" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.28628495" vertical-offset="215" max-vertical-offset="966">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7243675" vertical-offset="238" max-vertical-offset="989">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
           <folding>
-            <marker date="1433609614000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1433609614000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433609614000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
-            <marker date="1433609614000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609614000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433609614000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609614000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
-            <marker date="1433609614000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433613939000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433613939000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4900133" vertical-offset="0" max-vertical-offset="782">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding>
+            <marker date="1433614276000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1433614276000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433614276000" expanded="true" signature="-1:-1" placeholder=" The Artisan commands provided by your application. ..." />
+            <marker date="1433614276000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433614276000" expanded="true" signature="-1:-1" placeholder=" Define the application's command schedule. ..." />
+            <marker date="1433614276000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33688414" vertical-offset="0" max-vertical-offset="1242">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <marker date="1433614973000" expanded="true" signature="-1:-1" placeholder="{&quot;name&quot;: &quot;laravel/laravel&quot;...}" />
+            <marker date="1433614973000" expanded="true" signature="-1:-1" placeholder="{&quot;laravel/framework&quot;: &quot;5.0.*&quot;...}" />
+            <marker date="1433614973000" expanded="true" signature="-1:-1" placeholder="{&quot;phpunit/phpunit&quot;: &quot;~4.0&quot;...}" />
+            <marker date="1433614973000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433614973000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1433614973000" expanded="true" signature="-1:-1" placeholder="{&quot;App\\&quot;: &quot;app/&quot;...}" />
+            <marker date="1433614973000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433614973000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1433614973000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433614973000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1433614973000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1433614973000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1433614973000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1433614973000" expanded="true" signature="-1:-1" placeholder="{&quot;preferred-install&quot;: &quot;dist&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/factories/factories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33688414" vertical-offset="0" max-vertical-offset="751">
+          <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+          <folding>
+            <marker date="1433615390000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433615390000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433615390000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433615390000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433615390000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433615390000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -432,258 +560,140 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php">
+    <entry file="file://$PROJECT_DIR$/app/Blotter/Scraper/FetchesCSVForDay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33288947" vertical-offset="12262" max-vertical-offset="21298">
-          <caret line="547" column="20" selection-start-line="547" selection-start-column="20" selection-end-line="547" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.2756325" vertical-offset="0" max-vertical-offset="751">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
           <folding>
-            <marker date="1433609406000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" The table the blueprint describes. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" The columns that should be added to the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" The commands that should be run for the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" The storage engine that should be used for the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new schema blueprint. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Execute the blueprint against the database. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Get the raw SQL statements for the blueprint. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Add the commands that are implied by the blueprint. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Add the index commands fluently specified on columns. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Determine if the blueprint has a create command. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Indicate that the table needs to be created. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Indicate that the table should be dropped. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Indicate that the table should be dropped if it exists. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Indicate that the given columns should be dropped. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Indicate that the given columns should be renamed. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Indicate that the given primary key should be dropped. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Indicate that the given unique key should be dropped. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Indicate that the given index should be dropped. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Indicate that the given foreign key should be dropped. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Indicate that the timestamp columns should be dropped. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Indicate that the soft delete column should be dropped. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Rename the table to a given name. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Specify the primary key(s) for the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Specify a unique index for the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Specify an index for the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Specify a foreign key for the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new auto-incrementing integer column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new auto-incrementing big integer column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new char column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new string column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new text column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new medium text column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new long text column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new integer column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new big integer column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new medium integer column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new tiny integer column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new small integer column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new unsigned integer column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new unsigned big integer column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new float column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new double column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new decimal column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new boolean column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new enum column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new json column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new jsonb column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new date column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new date-time column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new date-time column (with time zone) on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new time column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new time column (with time zone) on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new timestamp column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new timestamp (with time zone) column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Add nullable creation and update timestamps to the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Add creation and update timestamps to the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Add a &quot;deleted at&quot; timestamp for the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new binary column on the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Add the proper columns for a polymorphic table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Adds the `remember_token` column to the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new drop index command on the blueprint. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Add a new index command to the blueprint. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a default index name for the table. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Add a new column to the blueprint. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Remove a column from the schema blueprint. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Add a new command to the blueprint. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Create a new Fluent command. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Get the table the blueprint describes. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Get the columns on the blueprint. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Get the commands on the blueprint. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Get the columns on the blueprint that should be added. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder=" Get the columns on the blueprint that should be changed. ..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433609406000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_02_02_005847_create_location.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6737683" vertical-offset="0" max-vertical-offset="1012">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding>
-            <marker date="1433609875000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1433609875000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433609875000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
-            <marker date="1433609875000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609875000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433609875000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433609875000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
-            <marker date="1433609875000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Blotter/Incident/Incident.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.183755" vertical-offset="0" max-vertical-offset="751">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding>
-            <marker date="1433610095000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433614716000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433614716000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Blotter/Location/Location.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="751">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.45938748" vertical-offset="0" max-vertical-offset="751">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <marker date="1433610053000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433615929000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433615929000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Blotter/Person/Person.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.183755" vertical-offset="0" max-vertical-offset="751">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.33688414" vertical-offset="0" max-vertical-offset="751">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
-            <marker date="1433610060000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433615987000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433615987000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Blotter/Scraper/FetchesCSVForDay.php">
+    <entry file="file://$PROJECT_DIR$/tests/TestCase.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.122503325" vertical-offset="0" max-vertical-offset="1587">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4900133" vertical-offset="0" max-vertical-offset="920">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <marker date="1433610575000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433610575000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433610575000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433610575000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433610575000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433610575000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433610575000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433610575000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433610575000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433610575000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433616389000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433616389000" expanded="true" signature="-1:-1" placeholder=" Creates the application. ..." />
+            <marker date="1433616389000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433616389000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433616389000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Blotter/Scraper/StoresWeeklyData.php">
+    <entry file="file://$PROJECT_DIR$/arrest_blotter_Monday.csv">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15312916" vertical-offset="0" max-vertical-offset="751">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.38280165" vertical-offset="0" max-vertical-offset="5382">
+          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Blotter/Incident/Incident.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.122503325" vertical-offset="0" max-vertical-offset="751">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
           <folding>
-            <marker date="1433611589000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433611589000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433615971000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433615971000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CSVHandlerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.551265" vertical-offset="0" max-vertical-offset="751">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Blotter/Scraper/HandlesCSVForDay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48601863" vertical-offset="1084" max-vertical-offset="2254">
+          <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+          <folding>
+            <marker date="1433617780000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1433617780000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433617780000" expanded="true" signature="-1:-1" placeholder=" @var ..." />
+            <marker date="1433617780000" expanded="true" signature="-1:-1" placeholder=" @var ..." />
+            <marker date="1433617780000" expanded="true" signature="-1:-1" placeholder=" @var ..." />
+            <marker date="1433617780000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433617780000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433617780000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433617780000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433617780000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433617780000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433617780000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433617780000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433617780000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433617780000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433617780000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433617780000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433617780000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433617780000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433617780000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/FetchThisWeekCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.551265" vertical-offset="667" max-vertical-offset="1863">
+          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+          <folding>
+            <marker date="1433614257000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1433614257000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433614257000" expanded="true" signature="-1:-1" placeholder=" The console command name. ..." />
+            <marker date="1433614257000" expanded="true" signature="-1:-1" placeholder=" The console command description. ..." />
+            <marker date="1433614257000" expanded="true" signature="-1:-1" placeholder=" @var ScrapesPoliceCSV ..." />
+            <marker date="1433614257000" expanded="true" signature="-1:-1" placeholder=" Create a new command instance. ..." />
+            <marker date="1433614257000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433614257000" expanded="true" signature="-1:-1" placeholder=" Execute the console command. ..." />
+            <marker date="1433614257000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433614257000" expanded="true" signature="-1:-1" placeholder=" Get the console command arguments. ..." />
+            <marker date="1433614257000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433614257000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433614257000" expanded="true" signature="-1:-1" placeholder=" Get the console command options. ..." />
+            <marker date="1433614257000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433614257000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Commands/Blotter/Scraper/ScrapesPoliceCSV.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66311586" vertical-offset="629" max-vertical-offset="1380">
-          <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.64314246" vertical-offset="276" max-vertical-offset="1058">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>

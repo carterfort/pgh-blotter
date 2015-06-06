@@ -1,40 +1,22 @@
 <?php namespace App\Commands\Blotter\Scraper;
 
-use App\Blotter\Incident\Incident;
-use App\Blotter\Location\Location;
-use App\Blotter\Person\Person;
 use App\Commands\Command;
 
 use Carbon\Carbon;
-use FetchesCSVForDay;
+use Blotter\Scraper\FetchesCSVForDay;
+use Blotter\Scraper\HandlesCSVForDay;
 use Illuminate\Contracts\Bus\SelfHandling;
-use StoresWeeklyData;
 
 class ScrapesPoliceCSV extends Command implements SelfHandling {
 
 
     /**
-     * @var FetchesCSVForDay
+     * Execute the command.
+     *
+     * @param FetchesCSVForDay $CSVForDay
+     * @param HandlesCSVForDay $csvHandler
      */
-    private $csvFetcher;
-    /**
-     * @var StoresWeeklyData
-     */
-    private $dataStorer;
-
-    public function __construct(FetchesCSVForDay $csvFetcher, StoresWeeklyData $dataStorer)
-	{
-		//
-        $this->csvFetcher = $csvFetcher;
-        $this->dataStorer = $dataStorer;
-    }
-
-	/**
-	 * Execute the command.
-	 *
-	 * @return void
-	 */
-	public function handle()
+	public function handle(FetchesCSVForDay $CSVForDay, HandlesCSVForDay $csvHandler)
 	{
 		//
 
@@ -52,10 +34,11 @@ class ScrapesPoliceCSV extends Command implements SelfHandling {
         foreach ($daysOfTheWeek as $day)
         {
 
-            sleep(1);
+            $dailyCSV = $CSVForDay->forDay($day);
+            $csvHandler->storeDailyReports($dailyCSV);
 
-            $weeklyData = $this->csvFetcher->dataArrayForDay($day);
-            $this->dataStorer->weeklyData($weeklyData);
+            sleep(0.1);
+
         }
 	}
 

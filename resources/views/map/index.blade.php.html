@@ -7,7 +7,7 @@
   <body>
     <style>
       #map { height: 500px; }
-    .my-div-icon { border: 1px solid black; border-radius: 50%; height: 10px; width: 10px; background: red;}
+    .marker-div-icon { border: 1px solid black; border-radius: 50%; height: 10px; width: 10px; background: red;}
     </style>
 
     <h1>PGH Blotter</h1>
@@ -45,7 +45,7 @@
     //////////////////////////
 
     var map = L.map('map').setView([40.4397, -79.9764], 10);
-    var myIcon = L.divIcon({className: 'my-div-icon', iconSize: [8, 8]});
+    var marker_icon = L.divIcon({className: 'marker-div-icon', iconSize: [8, 8]});
 
     var attribution = '<p style="font-size:0.6rem">Map tiles by <a href="http://stamen.com">Stamen Design</a>, ' +
       'under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> license. ' +
@@ -58,7 +58,7 @@
     }).addTo(map);
 
     for (var i=0; i<data.length; i++) {
-        L.marker(data[i]['location'], {icon: myIcon}).addTo(map);
+        L.marker(data[i]['location'], {icon: marker_icon}).addTo(map);
     }
 
   </script>

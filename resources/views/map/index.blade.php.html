@@ -15,6 +15,33 @@
 
   <!-- Leaflet Script -->
   <script>
+    // Generate a bunch of Fake Data
+    ////////////////////////////////
+
+    function rand_lat_diff() {
+        var miles_per_lat = 53;
+        return Math.random() * (1/miles_per_lat - (-1/miles_per_lat)) + 1/miles_per_lat;
+    }
+    function rand_long_diff() {
+        var miles_per_long = 69;
+        return Math.random() * (1/miles_per_long - (-1/miles_per_long)) + 1/miles_per_long;
+    }
+
+    var data = [];
+    var miles_per_long = 69;
+    lat = 40.4397;
+    long = -79.9764;
+    for (var i=0; i<1000; i++) {
+        lat += rand_lat_diff();
+        long += rand_long_diff();
+        data.push(
+            {'location': [lat, long], 'people': ['mary', 'tom', 'sue']}
+        );
+    };
+
+
+    // Actually Render the Map
+    //////////////////////////
 
     var map = L.map('map').setView([40.4397, -79.9764], 10);
 
@@ -27,6 +54,8 @@
         attribution: 'Map data &copy; ' + attribution,
         maxZoom: 18,
     }).addTo(map);
+
+    console.log(data);
   </script>
 
 </html>

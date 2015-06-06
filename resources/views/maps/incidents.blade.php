@@ -3,46 +3,33 @@
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
     <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
 
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   </head>
 
   <body>
     <style>
-      #map { height: 500px; }
+      #map {
+          height: 500px;
+      }
+
       #controls { width: 200px; padding: 10px;}
-      .marker-div-icon { border: 1px solid black; border-radius: 50%; height: 10px; width: 10px; background: red;}
+      .marker-div-icon {
+          border: 1px solid black;
+          border-radius: 50%;
+          height: 10px;
+          width: 10px;
+          background: red;
+      }
     </style>
-    <script>
-    $(function() {
-        $( "#slider" ).slider();
-    });
-    </script>
 
     <h1>PGH Blotter</h1>
-    <div id="controls">
-      <div id="slider"></div>
-    </div>
+
     <div id="map"></div>
   </body>
 
   <!-- Leaflet Script -->
   <script>
-    // Generate a bunch of Fake Data
-    ////////////////////////////////
 
-    function rand_lat_diff() {
-        var miles_per_lat = 53;
-        return Math.random() * 2/miles_per_lat - 1/miles_per_lat;
-    }
-    function rand_long_diff() {
-        var miles_per_long = 69;
-        return Math.random() * 2/miles_per_long - 1/miles_per_long;
-    }
-
-    var data = {!!$incidents->toJson()!!};
-
+    var data = {!! $incidents->toJson() !!};
 
     // Actually Render the Map
     //////////////////////////
@@ -61,17 +48,16 @@
     }).addTo(map);
 
     for (var i=0; i<data.length; i++) {
+
         var latitude = parseFloat(data[i].location.latitude);
         var longitude = parseFloat(data[i].location.longitude);
 
         if ( (isNaN(latitude) || isNaN(longitude)) || latitude == 0 || longitude == 0 ) continue;
 
-        var coordinates = {
-            lat:  latitude,
-            lng: longitude
-        };
+        var coordinates = [longitude, latitude];
 
         var marker = L.marker(coordinates, {icon: marker_icon});
+        console.log(marker);
         marker.addTo(map);
     }
 

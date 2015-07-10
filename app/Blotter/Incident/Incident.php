@@ -26,6 +26,20 @@ class Incident extends Model {
         });
     }
 
+    public function scopeOccurredBetween($query, $dates)
+    {
+        if ( $dates[0] )
+            return $query->whereBetween('occurred_at', $dates);
+    }
+
+    public function scopeSection($query, $section)
+    {
+        if ( $section )
+            return $query->whereHas('violation', function($query) use ($section){
+                $query->whereSectionNumber($section);
+            });
+    }
+
 
     /*
     ===========
@@ -41,6 +55,11 @@ class Incident extends Model {
     public function people()
     {
         return $this->hasMany('Blotter\Person\Person');
+    }
+
+    public function violations()
+    {
+        return $this->hasMany('Blotter\Incident\Violation');
     }
 
     /*

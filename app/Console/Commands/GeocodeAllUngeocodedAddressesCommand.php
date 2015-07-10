@@ -61,6 +61,9 @@ class GeocodeAllUngeocodedAddressesCommand extends Command {
                 $this->attachCoordinatesToLocations($locations, $geocodedLocations);
 
         });
+
+        $remaining = $this->locations->whereNull('latitude')->whereNull('longitude')->count();
+        $this->info($remaining." remaining");
 	}
 
 

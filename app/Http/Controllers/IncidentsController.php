@@ -23,7 +23,7 @@ class IncidentsController extends Controller {
             ->occurredBetween([
                 Input::get('start-date'), Input::get('end-date')
             ])
-            ->section(Input::get('section'))
+            ->violationSection(Input::get('section'))
             ->mappable()
             ->with([
                 'location',

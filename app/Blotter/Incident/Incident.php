@@ -32,7 +32,7 @@ class Incident extends Model {
             return $query->whereBetween('occurred_at', $dates);
     }
 
-    public function scopeSection($query, $section)
+    public function scopeViolationSection($query, $section)
     {
         if ( $section )
             return $query->whereHas('violations', function($query) use ($section){

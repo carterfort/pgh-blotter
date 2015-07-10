@@ -16,6 +16,6 @@ Route::get('/', 'MapsController@show');
 Route::group(['prefix' => 'api/v1'], function(){
 
     Route::get('incidents/search', ['as' => 'api.v1.incidents.search', 'uses' => 'IncidentsController@search']);
-
+    Route::resource('violations', 'ViolationsController');
 });
 

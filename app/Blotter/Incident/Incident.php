@@ -35,7 +35,7 @@ class Incident extends Model {
     public function scopeSection($query, $section)
     {
         if ( $section )
-            return $query->whereHas('violation', function($query) use ($section){
+            return $query->whereHas('violations', function($query) use ($section){
                 $query->whereSectionNumber($section);
             });
     }

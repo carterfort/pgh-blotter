@@ -16,7 +16,6 @@ class MapsController extends Controller {
 
     public function show()
     {
-        $incidents = $this->incidents->mappable()->with(['location', 'people'])->get();
-        return view('maps.incidents', compact('incidents'));
+        return view('maps.incidents');
     }
 }

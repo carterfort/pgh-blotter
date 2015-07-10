@@ -76,8 +76,8 @@ class GeocodeAllUngeocodedAddressesCommand extends Command {
             if ( $this->isGoodLocation($geoLocation) ) continue;
 
             $latLong = [
-                "latitude"  => $geoLocation->x,
-                "longitude" => $geoLocation->y
+                "latitude"  => $geoLocation->y,
+                "longitude" => $geoLocation->x
             ];
 
             $location->update($latLong);

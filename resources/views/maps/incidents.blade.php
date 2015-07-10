@@ -38,25 +38,46 @@
             var map = new google.maps.Map(document.getElementById('map-canvas'),
                     mapOptions);
 
-            $.get("{{ route('api.v1.incidents.search') }}", function (result) {
+            var redCircle = {
+                path: 'M-9,1a10,10 0 1,0 20,0a10,10 0 1,0 -20,0',
+                fillColor: 'red',
+                fillOpacity: 1,
+                scale: 0.2,
+                strokeColor: 'dark red',
+                strokeWeight: 1
+            };
 
+            $.get("{{ route('api.v1.incidents.search') }}?start-date={{date('Y-m-d', strtotime(' - 3 days '))}}&end-date={{date('Y-m-d')}}", function (result) {
+
+                $('#violations').empty();
 
                 result.forEach( function (incident) {
+
                     var latlng = new google.maps.LatLng(incident.location.latitude, incident.location.longitude);
                     var marker = new google.maps.Marker({
                         position: latlng,
                         map: map,
-                        title: incident.created_at,
-                        animation: google.maps.Animation.DROP,
+                        icon: redCircle,
+                        title: "Occurred "+incident.occurred_at,
                     });
+                    addIncidentToListGroup(incident);
                 });
             });
+
+            function addIncidentToListGroup(incident)
+            {
+                incident.violations.forEach( function(violation){
+                    var violationHTML = "<a href='#' class='list-group-item'>"+violation.section_number+"<br/>"+violation.description+"</a>";
+                    $('#violations').append(violationHTML);
+                })
+            }
         }
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 
     <style>
         #map-canvas {height: 500px; padding: 10px;}
+        #violations { max-height: 500px; overflow-y: scroll; }
     </style>
 
 

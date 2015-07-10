@@ -18,7 +18,6 @@ class IncidentsController extends Controller {
     public function search()
     {
 
-
         return $this->incidents
             ->occurredBetween([
                 Input::get('start-date'), Input::get('end-date')
@@ -29,7 +28,8 @@ class IncidentsController extends Controller {
                 'location',
                 'people',
                 'violations'
-            ])
+            ])->leftJoin("violations", "violations.incident_id", "=", "incidents.id")
+            ->orderBy('violations.section_number', 'ASC')
             ->get();
     }
 }

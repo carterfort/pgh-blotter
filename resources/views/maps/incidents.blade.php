@@ -38,14 +38,18 @@
             var map = new google.maps.Map(document.getElementById('map-canvas'),
                     mapOptions);
 
-            var redCircle = {
-                path: 'M-9,1a10,10 0 1,0 20,0a10,10 0 1,0 -20,0',
-                fillColor: 'red',
-                fillOpacity: 1,
-                scale: 0.2,
-                strokeColor: 'dark red',
-                strokeWeight: 1
-            };
+            function redCircle(scale)
+            {
+                console.log(scale);
+                return {
+                    path: 'M-9,1a10,10 0 1,0 20,0a10,10 0 1,0 -20,0',
+                    fillColor: 'red',
+                    fillOpacity: 1,
+                    scale: scale,
+                    strokeColor: 'dark red',
+                    strokeWeight: 1
+                };
+            }
 
             loadedIncidents = {};
 
@@ -59,7 +63,7 @@
                     var marker = new google.maps.Marker({
                         position: latlng,
                         map: map,
-                        icon: redCircle,
+                        icon: redCircle(0.2),
                         title: "Occurred "+incident.occurred_at,
                     });
 
@@ -82,8 +86,27 @@
                 map.panTo(marker.position);
                 map.setZoom(17);
             });
+
+
+            google.maps.event.addListener(map, 'zoom_changed', function() {
+                zoomLevel = map.getZoom();
+                for (var id in loadedIncidents)
+                {
+                    var marker = loadedIncidents[id];
+
+                    var scale = 0.2;
+                    if (zoomLevel > 12)
+                    {
+                      scale = (-11 + zoomLevel) * 0.2;
+                    }
+
+                    marker.setIcon(redCircle(scale));
+
+                }
+            });
         }
         google.maps.event.addDomListener(window, 'load', initialize);
+
     </script>
 
     <style>

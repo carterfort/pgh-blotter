@@ -40,7 +40,7 @@
 
             function redCircle(scale)
             {
-                console.log(scale);
+
                 return {
                     path: 'M-9,1a10,10 0 1,0 20,0a10,10 0 1,0 -20,0',
                     fillColor: 'red',
@@ -67,7 +67,7 @@
                         title: "Occurred "+incident.occurred_at,
                     });
 
-                    loadedIncidents[incident.id] = marker;
+                    loadedIncidents[incident.id] = {"marker" : marker, "incident" : incident};
                     addIncidentToListGroup(incident);
                 });
             });
@@ -75,16 +75,51 @@
             function addIncidentToListGroup(incident)
             {
                 incident.violations.forEach( function(violation){
-                    var violationHTML = "<a href='#' data-incident-id='"+incident.id+"' class='list-group-item load-incident'>"+violation.section_number+"<br/>"+violation.description+"</a>";
+                    var violationHTML = "<a href='#' data-incident-id='"+incident.id+"' class='list-group-item load-incident'>Incident "+incident.occurred_at+" <br/><b>Violation "+violation.section_number+"</b><br/>"+violation.description+"</a>";
                     $('#violations').append(violationHTML);
                 })
             }
 
+            openIncidentWindows = [];
+
             $(document).on('click', '.load-incident', function(e){
                 e.preventDefault();
-                var marker = loadedIncidents[$(this).data('incident-id')];
+
+                openIncidentWindows.forEach( function(window) {
+                    window.close();
+                });
+
+                var marker = loadedIncidents[$(this).data('incident-id')]["marker"];
+                var incident = loadedIncidents[$(this).data('incident-id')]["incident"];
+
                 map.panTo(marker.position);
                 map.setZoom(17);
+
+
+                var contentString = '<div id="content">'+
+                        '<div id="siteNotice">'+
+                        '</div>'+
+                        '<h3 id="firstHeading" class="firstHeading">Incident '+incident.id+'</h3>'+
+                        '<div id="bodyContent">'+
+                        '<p><b>Violations ('+incident.violations.length+')</b><br/>' +
+                        '<ul>';
+
+                incident.violations.forEach( function (violation){
+                    contentString += '<li><b>'+violation.section_number+'</b><br/>'+violation.description+'</li>';
+                });
+
+                  contentString += '</ul>'+
+                        '</p>'+
+                        '</div>'+
+                        '</div>';
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+
+                infowindow.open(map,marker);
+
+                openIncidentWindows.push(infowindow);
             });
 
 
@@ -92,7 +127,7 @@
                 zoomLevel = map.getZoom();
                 for (var id in loadedIncidents)
                 {
-                    var marker = loadedIncidents[id];
+                    var marker = loadedIncidents[id]["marker"];
 
                     var scale = 0.2;
                     if (zoomLevel > 12)

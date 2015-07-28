@@ -47,6 +47,8 @@
                 strokeWeight: 1
             };
 
+            loadedIncidents = {};
+
             $.get("{{ route('api.v1.incidents.search') }}?start-date={{date('Y-m-d', strtotime(' - 3 days '))}}&end-date={{date('Y-m-d')}}", function (result) {
 
                 $('#violations').empty();
@@ -54,12 +56,14 @@
                 result.forEach( function (incident) {
 
                     var latlng = new google.maps.LatLng(incident.location.latitude, incident.location.longitude);
-                    new google.maps.Marker({
+                    var marker = new google.maps.Marker({
                         position: latlng,
                         map: map,
                         icon: redCircle,
                         title: "Occurred "+incident.occurred_at,
                     });
+
+                    loadedIncidents[incident.id] = marker;
                     addIncidentToListGroup(incident);
                 });
             });
@@ -67,10 +71,17 @@
             function addIncidentToListGroup(incident)
             {
                 incident.violations.forEach( function(violation){
-                    var violationHTML = "<a href='#' class='list-group-item'>"+violation.section_number+"<br/>"+violation.description+"</a>";
+                    var violationHTML = "<a href='#' data-incident-id='"+incident.id+"' class='list-group-item load-incident'>"+violation.section_number+"<br/>"+violation.description+"</a>";
                     $('#violations').append(violationHTML);
                 })
             }
+
+            $(document).on('click', '.load-incident', function(e){
+                e.preventDefault();
+                var marker = loadedIncidents[$(this).data('incident-id')];
+                map.panTo(marker.position);
+                map.setZoom(17);
+            });
         }
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>

@@ -114,6 +114,7 @@
                         '<div id="siteNotice">'+
                         '</div>'+
                         '<h3 id="firstHeading" class="firstHeading">Incident '+incident.id+'</h3>'+
+                                '<h5>Occurred '+incident.occurred_at+'</h5>'+
                         '<div id="bodyContent">'+
                         '<p><b>Violations ('+incident.violations.length+')</b><br/>' +
                         '<ul>';
@@ -123,10 +124,12 @@
                 });
 
                 contentString += '</ul>'+
-                                '<b>People Involved</b><br/>'+
+                                '<b>People Involved ('+incident.people.length+')</b><br/>'+
                                 '<ul>';
                 incident.people.forEach( function (person) {
-                    contentString += '<li>'+person.age+' year old '+person.sex+'</li>';
+                    if (person.age && person.sex != 'N/A'){
+                        contentString += '<li>'+person.age+' year old '+person.sex+'</li>';
+                    }
                 });
                 contentString += '</ul>'+
                         '</p>'+

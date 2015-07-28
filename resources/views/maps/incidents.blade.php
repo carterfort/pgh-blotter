@@ -54,7 +54,7 @@
                 result.forEach( function (incident) {
 
                     var latlng = new google.maps.LatLng(incident.location.latitude, incident.location.longitude);
-                    var marker = new google.maps.Marker({
+                    new google.maps.Marker({
                         position: latlng,
                         map: map,
                         icon: redCircle,

@@ -24,12 +24,11 @@ class IncidentsController extends Controller {
             ])
             ->violationSection(Input::get('section'))
             ->mappable()
+            ->has('violations')
             ->with([
                 'location',
                 'people',
                 'violations'
-            ])->leftJoin("violations", "violations.incident_id", "=", "incidents.id")
-            ->orderBy('violations.section_number', 'ASC')
-            ->get();
+            ])->get();
     }
 }

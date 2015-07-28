@@ -67,6 +67,12 @@
                         title: "Occurred "+incident.occurred_at,
                     });
 
+                    var infoWindow = infoWindowForIncident(incident);
+
+                    google.maps.event.addListener(marker, 'click', function() {
+                        infoWindow.open(map,marker);
+                    });
+
                     loadedIncidents[incident.id] = {"marker" : marker, "incident" : incident};
                     addIncidentToListGroup(incident);
                 });
@@ -95,6 +101,14 @@
                 map.panTo(marker.position);
                 map.setZoom(17);
 
+                var infoWindow = infoWindowForIncident(incident);
+                infoWindow.open(map, marker);
+
+                openIncidentWindows.push(infoWindow);
+            });
+
+            function infoWindowForIncident(incident)
+            {
 
                 var contentString = '<div id="content">'+
                         '<div id="siteNotice">'+
@@ -108,7 +122,13 @@
                     contentString += '<li><b>'+violation.section_number+'</b><br/>'+violation.description+'</li>';
                 });
 
-                  contentString += '</ul>'+
+                contentString += '</ul>'+
+                                '<b>People Involved</b><br/>'+
+                                '<ul>';
+                incident.people.forEach( function (person) {
+                    contentString += '<li>'+person.age+' year old '+person.sex+'</li>';
+                });
+                contentString += '</ul>'+
                         '</p>'+
                         '</div>'+
                         '</div>';
@@ -117,10 +137,8 @@
                     content: contentString
                 });
 
-                infowindow.open(map,marker);
-
-                openIncidentWindows.push(infowindow);
-            });
+                return infowindow
+            }
 
 
             google.maps.event.addListener(map, 'zoom_changed', function() {

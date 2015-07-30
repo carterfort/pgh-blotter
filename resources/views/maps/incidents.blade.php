@@ -51,6 +51,18 @@
                 };
             }
 
+            function prettyDate(date)
+            {
+                var d = new Date(Date.parse(date));
+
+                var options = {
+                    weekday: "long", year: "numeric", month: "short",
+                    day: "numeric", hour: "2-digit", minute: "2-digit"
+                };
+
+                return d.toLocaleTimeString('en-us', options);
+            }
+
             loadedIncidents = {};
 
             $.get("{{ route('api.v1.incidents.search') }}?start-date={{date('Y-m-d', strtotime(' - 3 days '))}}&end-date={{date('Y-m-d')}}", function (result) {
@@ -64,7 +76,7 @@
                         position: latlng,
                         map: map,
                         icon: redCircle(0.2),
-                        title: "Occurred "+incident.occurred_at,
+                        title: "Occurred "+prettyDate(incident.occurred_at),
                     });
 
                     var infoWindow = infoWindowForIncident(incident);
@@ -81,7 +93,7 @@
             function addIncidentToListGroup(incident)
             {
                 incident.violations.forEach( function(violation){
-                    var violationHTML = "<a href='#' data-incident-id='"+incident.id+"' class='list-group-item load-incident'>Incident "+incident.occurred_at+" <br/><b>Violation "+violation.section_number+"</b><br/>"+violation.description+"</a>";
+                    var violationHTML = "<a href='#' data-incident-id='"+incident.id+"' class='list-group-item load-incident'><b>Violation "+violation.section_number+"</b><br/>"+violation.description+"<br/>Occurred "+prettyDate(incident.occurred_at)+"</a>";
                     $('#violations').append(violationHTML);
                 })
             }
@@ -114,7 +126,7 @@
                         '<div id="siteNotice">'+
                         '</div>'+
                         '<h3 id="firstHeading" class="firstHeading">Incident '+incident.id+'</h3>'+
-                                '<h5>Occurred '+incident.occurred_at+'</h5>'+
+                                '<h5>Occurred '+prettyDate(incident.occurred_at)+'</h5>'+
                         '<div id="bodyContent">'+
                         '<p><b>Violations ('+incident.violations.length+')</b><br/>' +
                         '<ul>';

@@ -33,6 +33,7 @@ class IncidentsController extends Controller {
             join('violations', 'incidents.id','=','violations.incident_id')
             ->select('incidents.*')
             ->orderBy('violations.description', 'ASC')
+            ->groupBy('incidents.id')
             ->get();
     }
 }

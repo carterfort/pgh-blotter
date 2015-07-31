@@ -214,6 +214,12 @@
         $(document).on('change', 'select[name="filter-by-violation"]', function(e){
             var search = $(this).val().toLowerCase();
 
+            if (search == 'show all')
+            {
+                $('#violations .list-group-item').show();
+                return;
+            }
+
             $('#violations .list-group-item').each(function(){
                 var text = $(this).text().toLowerCase();
                 (text.indexOf(search) >= 0) ? $(this).show() : $(this).hide();

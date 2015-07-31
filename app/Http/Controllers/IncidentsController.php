@@ -31,8 +31,8 @@ class IncidentsController extends Controller {
                 'violations'
             ])->
             join('violations', 'incidents.id','=','violations.incident_id')
-            ->orderBy('violations.section_number', 'ASC')
-            ->select('incidents.*') // avoid fetching anything from joined table
+            ->select('incidents.*')
+            ->orderBy('violations.description', 'ASC')
             ->get();
     }
 }

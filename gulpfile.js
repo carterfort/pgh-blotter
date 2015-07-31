@@ -12,6 +12,17 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.less('app.less')
-        .version('css/app.css');
+    mix.less('app.less', 'resources/assets/css/app.css')
+        .styles([
+            'app.css/app.css',
+            'select2.css'
+        ], 'public/css/blotter.css')
+        .scripts([
+            'jquery.1.1.3.js',
+            'select2.js',
+        ], 'public/js/blotter.js')
+        .version(['public/css/blotter.css', 'public/js/blotter.js']);
+
+    mix.copy('public/fonts', 'public/build/fonts');
+
 });

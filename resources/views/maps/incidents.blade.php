@@ -12,7 +12,13 @@
             <div id="map-canvas"></div>
         </div>
         <div class="col-sm-4">
+            <div id="drop-down-selector">
+
+            </div>
+            <br/>
+
             <div class="list-group" id="violations">
+
                     <div class="list-group-item">
                         Loading...
                     </div>
@@ -26,7 +32,6 @@
 @section('head')
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-7MeY40PdXAtwlNli5FiTn5RWovQlG7s"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
     <script type="text/javascript">
 
@@ -69,7 +74,16 @@
 
                 $('#violations').empty();
 
+                var violations = [];
+
                 result.forEach( function (incident) {
+
+                    incident.violations.forEach(function (violation){
+                       if ( violations.indexOf(violation.description) == -1)
+                       {
+                            violations.push(violation.description);
+                       }
+                    });
 
                     var latlng = new google.maps.LatLng(incident.location.latitude, incident.location.longitude);
                     var marker = new google.maps.Marker({
@@ -88,12 +102,34 @@
                     loadedIncidents[incident.id] = {"marker" : marker, "incident" : incident};
                     addIncidentToListGroup(incident);
                 });
+
+                var html = dropdownFilterHTMLForViolations(violations);
+
+                $("#drop-down-selector").html(html);
+
+                $(document).ready(function(){
+                    $('[name="filter-by-violation"]').select2();
+                });
             });
+
+            function dropdownFilterHTMLForViolations(violations)
+            {
+                var html = '<select name="filter-by-violation">';
+                html += '<option>Show all</option>';
+
+                violations.forEach( function (violation ){
+                    html += '<option value="'+violation+'">'+violation+'</option>';
+                });
+
+                html += '</select>';
+
+                return html;
+            }
 
             function addIncidentToListGroup(incident)
             {
                 incident.violations.forEach( function(violation){
-                    var violationHTML = "<a href='#' data-incident-id='"+incident.id+"' class='list-group-item load-incident'><b>Violation "+violation.section_number+"</b><br/>"+violation.description+"<br/>Occurred "+prettyDate(incident.occurred_at)+"</a>";
+                    var violationHTML = "<a href='#' data-incident-id='"+incident.id+"' class='list-group-item load-incident'><b>Violation "+violation.section_number+"</b> <br/>"+violation.description+" <br/>Occurred "+prettyDate(incident.occurred_at)+"</a>";
                     $('#violations').append(violationHTML);
                 })
             }
@@ -175,11 +211,24 @@
         }
         google.maps.event.addDomListener(window, 'load', initialize);
 
+        $(document).on('change', 'select[name="filter-by-violation"]', function(e){
+            var search = $(this).val().toLowerCase();
+
+            $('#violations .list-group-item').each(function(){
+                var text = $(this).text().toLowerCase();
+                (text.indexOf(search) >= 0) ? $(this).show() : $(this).hide();
+            });
+
+        });
     </script>
 
     <style>
         #map-canvas {height: 500px; padding: 10px;}
         #violations { max-height: 500px; overflow-y: scroll; }
+
+        select[name="filter-by-violation"] {
+            max-width: 100%;
+        }
     </style>
 
 

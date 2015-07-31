@@ -65,7 +65,7 @@ class GeocodeAllUngeocodedAddressesCommand extends Command {
         $loopCount = 0;
         $locationsPerLoop = 10;
 
-        while($remaining > 0 && $previousMatches < 1)
+        while($remaining > 0 && $previousMatches < 10)
         {
             if ($previousRemaining == $remaining)
             {

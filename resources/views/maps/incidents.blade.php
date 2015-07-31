@@ -211,7 +211,8 @@
         }
         google.maps.event.addDomListener(window, 'load', initialize);
 
-        $(document).on('change', 'select[name="filter-by-violation"]', function(e){
+        $(document).on('change', 'select[name="filter-by-violation"]', function(){
+
             var search = $(this).val().toLowerCase();
 
             if (search == 'show all')

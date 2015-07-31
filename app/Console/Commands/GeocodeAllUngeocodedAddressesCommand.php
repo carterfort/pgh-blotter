@@ -1,6 +1,7 @@
 <?php namespace App\Console\Commands;
 
 use Blotter\GeocodeAPI\Geocoder;
+use Blotter\GeocodeAPI\GoogleGeocoder;
 use Blotter\Location\Location;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
@@ -29,18 +30,24 @@ class GeocodeAllUngeocodedAddressesCommand extends Command {
      * @var Location
      */
     private $locations;
+    /**
+     * @var GoogleGeocoder
+     */
+    private $googleGeocoder;
 
     /**
      * Create a new command instance.
      *
      * @param Geocoder $geocoder
      * @param Location $locations
+     * @param GoogleGeocoder $googleGeocoder
      */
-	public function __construct(Geocoder $geocoder, Location $locations)
+	public function __construct(Geocoder $geocoder, Location $locations, GoogleGeocoder $googleGeocoder)
 	{
 		parent::__construct();
         $this->geocoder = $geocoder;
         $this->locations = $locations;
+        $this->googleGeocoder = $googleGeocoder;
     }
 
 	/**
@@ -52,19 +59,63 @@ class GeocodeAllUngeocodedAddressesCommand extends Command {
 	{
 		//
 
-        $this->locations
+        $remaining = $this->locations->whereNull('latitude')->whereNull('longitude')->count();
+        $previousRemaining = false;
+        $previousMatches = 0;
+        $loopCount = 0;
+        $locationsPerLoop = 10;
+
+        while($remaining > 0 && $previousMatches < 1)
+        {
+            if ($previousRemaining == $remaining)
+            {
+                $previousMatches++;
+            }
+
+            $previousRemaining = $remaining;
+
+            $locations = $this->locations
+                ->whereNull('latitude')
+                ->whereNull('longitude')
+                ->take($locationsPerLoop)->skip($loopCount * $locationsPerLoop)->get();
+
+            $geocodedLocations = $this->geocoder->geocodeAddresses($locations->lists('address'));
+            $this->attachCoordinatesToLocations($locations, $geocodedLocations);
+
+            $remaining = $this->locations->whereNull('latitude')->whereNull('longitude')->count();
+
+            $loopCount++;
+
+        }
+
+        $remainingLocations = $this->locations
             ->whereNull('latitude')
             ->whereNull('longitude')
-            ->chunk(5, function($locations){
+            ->get(['address', 'id']);
 
-                $geocodedLocations = $this->geocoder->geocodeAddresses($locations->lists('address'));
-                $this->attachCoordinatesToLocations($locations, $geocodedLocations);
+        $geocodedAddresses = $this->googleGeocoder->geocodeAddresses($remainingLocations->lists('address', 'id'));
 
-        });
+        foreach ($remainingLocations as $location)
+        {
+            if ( isset($geocodedAddresses[$location->id]) )
+            {
+                $geodata = $geocodedAddresses[$location->id];
+
+                $latLong = [
+                    'latitude' => $geodata['geometry']['location']['lat'],
+                    'longitude' => $geodata['geometry']['location']['lng'],
+                ];
+
+                $location->update($latLong);
+            }
+        }
 
         $remaining = $this->locations->whereNull('latitude')->whereNull('longitude')->count();
-        $this->info($remaining." remaining");
+
+        $this->info($remaining.' remaining');
+
 	}
+
 
 
     private function attachCoordinatesToLocations($locations, $geocodedLocations)

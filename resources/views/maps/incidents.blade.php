@@ -62,7 +62,7 @@
                 var d = new Date(Date.parse(date));
 
                 var options = {
-                    weekday: "long", year: "numeric", month: "short",
+                    weekday: "short", year: "numeric", month: "long",
                     day: "numeric", hour: "2-digit", minute: "2-digit"
                 };
 
@@ -91,7 +91,7 @@
                         position: latlng,
                         map: map,
                         icon: markerCircle(0.2, incident),
-                        title: "Occurred "+prettyDate(incident.occurred_at),
+                        title: "Incident occurred "+prettyDate(incident.occurred_at),
                     });
 
                     var infoWindow = infoWindowForIncident(incident);
@@ -236,7 +236,7 @@
 
     <style>
         #map-canvas {height: 600px; padding: 10px;}
-        #violations { max-height: 500px; overflow-y: scroll; }
+        #violations { max-height: 550px; overflow-y: scroll; }
 
         select[name="filter-by-violation"] {
             max-width: 100%;

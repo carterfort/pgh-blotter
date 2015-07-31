@@ -29,11 +29,8 @@ class IncidentsController extends Controller {
                 'location',
                 'people',
                 'violations'
-            ])->
-            join('violations', 'incidents.id','=','violations.incident_id')
-            ->select('incidents.*')
-            ->orderBy('violations.description', 'ASC')
-            ->groupBy('incidents.id')
+            ])
+            ->orderBy('occurred_at', 'DESC')
             ->get();
     }
 }

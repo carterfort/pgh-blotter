@@ -13,6 +13,24 @@ class Incident extends Model {
         'description'
     ];
 
+    public function toArray()
+    {
+        $array = parent::toArray();
+        $array['color'] = $this->getColorAttribute();
+
+        return $array;
+    }
+
+    public $incidentColors = [
+
+        '#CE5151',
+        '#51B7CE',
+        '#E59A58',
+        '#6051CE',
+        '#51CE73'
+
+    ];
+
     /*
     ===========
     Scopes
@@ -74,5 +92,12 @@ class Incident extends Model {
     Getters
     ===========
     */
+
+    public function getColorAttribute()
+    {
+
+        return $this->incidentColors[ rand(0, (count($this->incidentColors)) - 1) ];
+
+    }
 
 }

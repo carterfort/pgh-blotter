@@ -10,6 +10,7 @@
     <div class="row">
         <div class="col-sm-8">
             <div id="map-canvas"></div>
+            <hr/>
         </div>
         <div class="col-sm-4">
             <div id="drop-down-selector">
@@ -43,12 +44,12 @@
             var map = new google.maps.Map(document.getElementById('map-canvas'),
                     mapOptions);
 
-            function redCircle(scale)
+            function markerCircle(scale, incident)
             {
 
                 return {
                     path: 'M-9,1a10,10 0 1,0 20,0a10,10 0 1,0 -20,0',
-                    fillColor: 'red',
+                    fillColor: incident.color,
                     fillOpacity: 1,
                     scale: scale,
                     strokeColor: 'dark red',
@@ -89,7 +90,7 @@
                     var marker = new google.maps.Marker({
                         position: latlng,
                         map: map,
-                        icon: redCircle(0.2),
+                        icon: markerCircle(0.2, incident),
                         title: "Occurred "+prettyDate(incident.occurred_at),
                     });
 
@@ -129,7 +130,10 @@
             function addIncidentToListGroup(incident)
             {
                 incident.violations.forEach( function(violation){
-                    var violationHTML = "<a href='#' data-incident-id='"+incident.id+"' class='list-group-item load-incident'><b>Violation "+violation.section_number+"</b> <br/>"+violation.description+" <br/>Occurred "+prettyDate(incident.occurred_at)+"</a>";
+                    var violationHTML = "<a style='color: white; background: "+incident.color+"'";
+                    violationHTML += "href='#' data-incident-id='"+incident.id+"' class='list-group-item load-incident'><b>Violation of Section "+violation.section_number+"</b>";
+                    violationHTML += "<br/>Incident #"+incident.id+" - "+violation.description+" <br/>Occurred "+prettyDate(incident.occurred_at)+"</a>";
+
                     $('#violations').append(violationHTML);
                 })
             }
@@ -197,6 +201,7 @@
                 for (var id in loadedIncidents)
                 {
                     var marker = loadedIncidents[id]["marker"];
+                    var incident = loadedIncidents[id]["incident"];
 
                     var scale = 0.2;
                     if (zoomLevel > 12)
@@ -204,7 +209,7 @@
                       scale = (-11 + zoomLevel) * 0.2;
                     }
 
-                    marker.setIcon(redCircle(scale));
+                    marker.setIcon(markerCircle(scale, incident));
 
                 }
             });
@@ -230,12 +235,17 @@
     </script>
 
     <style>
-        #map-canvas {height: 500px; padding: 10px;}
+        #map-canvas {height: 600px; padding: 10px;}
         #violations { max-height: 500px; overflow-y: scroll; }
 
         select[name="filter-by-violation"] {
             max-width: 100%;
         }
+
+        #violations b {
+            text-shadow: 0 1px 2px rgba(0,0,0,0.7);
+        }
+
     </style>
 
 

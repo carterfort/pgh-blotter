@@ -26,7 +26,7 @@
                     Loading...
                 </template>
                 <template v-repeat="incident in incidents">
-                    <h4>Incident occurred @{{ incident.occurred_at }}</h4>
+                    <h6>Incident occurred @{{ incident.occurred_at | prettyDate }}</h6>
                     <div class="list-group violation-group">
                         <div class="list-group-item"
                              v-repeat="incident.violations"
@@ -60,7 +60,14 @@
     <script>
 
         Vue.filter('prettyDate', function (value) {
+            var d = new Date(Date.parse(value));
 
+            var options = {
+                weekday: "short", year: "numeric", month: "long",
+                day: "numeric", hour: "2-digit", minute: "2-digit"
+            };
+
+            return d.toLocaleTimeString('en-us', options);
         })
 
         var demo = new Vue({

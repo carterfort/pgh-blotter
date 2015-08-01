@@ -12,5 +12,7 @@
 <div class="container">
     @yield('main')
 </div>
+
+@yield('scripts')
 </body>
 </html>

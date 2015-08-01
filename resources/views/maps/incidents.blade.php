@@ -70,14 +70,15 @@
             }
 
             loadedIncidents = {};
+            $('#violations').empty();
+            var violations = [];
 
             $.get("{{ route('api.v1.incidents.search') }}?start-date={{date('Y-m-d', strtotime(' - 3 days '))}}&end-date={{date('Y-m-d')}}", function (result) {
 
-                $('#violations').empty();
 
-                var violations = [];
 
                 result.forEach( function (incident) {
+
 
                     incident.violations.forEach(function (violation){
                        if ( violations.indexOf(violation.description) == -1)

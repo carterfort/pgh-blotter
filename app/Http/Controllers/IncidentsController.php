@@ -15,6 +15,16 @@ class IncidentsController extends Controller {
         $this->incidents = $incidents;
     }
 
+    public function index()
+    {
+        return view('incidents.index');
+    }
+
+    public function count()
+    {
+        return response()->json($this->incidents->mappable()->has('violations')->count());
+    }
+
     public function search()
     {
 
@@ -31,6 +41,22 @@ class IncidentsController extends Controller {
                 'violations'
             ])
             ->orderBy('occurred_at', 'DESC')
+            ->get();
+    }
+
+    public function allWithOffset()
+    {
+        return $this->incidents
+            ->mappable()
+            ->has('violations')
+            ->with([
+                'location',
+                'people',
+                'violations'
+            ])
+            ->orderBy('occurred_at', 'DESC')
+            ->take(400)
+            ->skip(Input::get('offset', 0))
             ->get();
     }
 }

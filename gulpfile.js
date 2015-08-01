@@ -18,6 +18,7 @@ elixir(function(mix) {
             'select2.css'
         ], 'public/css/blotter.css')
         .scripts([
+            'vue.js',
             'jquery.1.1.3.js',
             'select2.js',
         ], 'public/js/blotter.js')

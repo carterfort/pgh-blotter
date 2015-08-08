@@ -12,3 +12,14 @@
 */
 
 Route::get('/', 'MapsController@show');
+
+Route::get('incidents', 'IncidentsController@index');
+
+Route::group(['prefix' => 'api/v1'], function(){
+
+    Route::get('incidents/search', ['as' => 'api.v1.incidents.search', 'uses' => 'IncidentsController@search']);
+    Route::get('incidents/with-offset', ['as' => 'api.v1.incidents.all-with-offset', 'uses' => 'IncidentsController@allWithOffset']);
+    Route::get('incidents/count', ['as' => 'api.v1.incidents.count', 'uses' =>  'IncidentsController@count']);
+    Route::resource('violations', 'ViolationsController');
+});
+

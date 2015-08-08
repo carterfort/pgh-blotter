@@ -1,6 +1,7 @@
 <?php namespace Blotter\Scraper; 
 
 use Blotter\Incident\Incident;
+use Blotter\Incident\Violation;
 use Blotter\Location\Location;
 use Blotter\Person\Person;
 use Carbon\Carbon;
@@ -20,13 +21,18 @@ class HandlesCSVForDay {
      * @var
      */
     private $incidents;
+    /**
+     * @var Violation
+     */
+    private $violations;
 
-    public function __construct(Person $people, Location $locations, Incident $incidents)
+    public function __construct(Person $people, Location $locations, Incident $incidents, Violation $violations)
     {
 
         $this->people = $people;
         $this->locations = $locations;
         $this->incidents = $incidents;
+        $this->violations = $violations;
     }
 
 
@@ -68,14 +74,19 @@ class HandlesCSVForDay {
             {
                 Log::error(json_encode($keyedReport));
             }
+
             $occurance = Carbon::parse($keyedReport['ARREST_DATE'].' '.$keyedReport['ARREST_TIME']);
             $incident = $this->incidents->firstOrCreate([
                 'location_id' => $location->id,
                 'occurred_at' => $occurance,
                 'report_name' => $keyedReport["REPORT_NAME"],
                 'crime_report_number' => $keyedReport['CCR'],
-                'section' => $keyedReport['SECTION'],
-                'description' => $keyedReport['DESCRIPTION']
+            ]);
+
+            $this->violations->firstOrCreate([
+                'section_number' => $keyedReport['SECTION'],
+                'description' => $keyedReport['DESCRIPTION'],
+                'incident_id' => $incident->id
             ]);
 
             $reportSex = 'N/A';

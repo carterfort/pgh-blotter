@@ -1,6 +1,7 @@
 <?php namespace App\Console\Commands;
 
 use Blotter\Incident\Incident;
+use Blotter\Incident\Violation;
 use Blotter\Location\Location;
 use Blotter\Person\Person;
 
@@ -38,20 +39,25 @@ class FetchWeekFromGitHub extends Command {
 	 * @var Person
 	 */
 	private $people;
+    /**
+     * @var Violation
+     */
+    private $violations;
 
-	/**
+    /**
 	 * Create a new command instance.
 	 * @param Location $locations
 	 * @param Incident $incidents
 	 * @param Person $people
 	 */
-	public function __construct(Location $locations, Incident $incidents, Person $people)
+	public function __construct(Location $locations, Incident $incidents, Person $people, Violation $violations)
 	{
 		parent::__construct();
 		$this->locations = $locations;
 		$this->incidents = $incidents;
 		$this->people = $people;
-	}
+        $this->violations = $violations;
+    }
 
 	/**
 	 * Execute the console command.
@@ -67,6 +73,7 @@ class FetchWeekFromGitHub extends Command {
 
 		$startingDate = Carbon::now()->subWeeks($this->argument('weekOffset'));
 
+        $this->info('Fetching data from '.$startingDate->copy()->subWeek()->format('m/d/Y').' to '.$startingDate->format('m/d/Y'));
 		for ($i = 0; $i < 6; $i++)
 		{
 			$fileURLs[] = $this->baseURL.$startingDate->copy()->subDays($i)->format('Y-m-d').'Incidents.json';
@@ -80,7 +87,7 @@ class FetchWeekFromGitHub extends Command {
                 $this->storeIncidents($incidents);
 			} catch (\ErrorException $e)
 			{
-
+                $this->error(get_class($e));
 			}
 
 		}
@@ -113,17 +120,21 @@ class FetchWeekFromGitHub extends Command {
     private function storeIncidents($incidents)
     {
 
-        foreach ($incidents as $report)
+        $this->info('Storing '.count($incidents).' incidents');
+
+        foreach ($incidents as $reportContainer)
         {
+
+            $report = $reportContainer->incident;
+
 
             $location = $this->locations->firstOrCreate([
                 'address' => $report->address,
-                'neighborhood' => $report->neighborhood,
+                'neighborhood' => $report->neighbornood,
                 'zone' => $report->zone,
                 'latitude' => $report->lat,
                 'longitude' => $report->lng
             ]);
-
 
             $occurance = Carbon::parse($report->incidentdate.' '.$report->incidenttime);
             $incident = $this->incidents->firstOrCreate([
@@ -133,7 +144,18 @@ class FetchWeekFromGitHub extends Command {
                 'crime_report_number' => $report->incidentnumber
             ]);
 
-            $reportSex = 'N/A';
+
+            foreach($report->sections as $violation)
+			{
+                $this->violations->firstOrCreate([
+                    'section_number' => $violation->section,
+                    'description' => $violation->description,
+                    'incident_id' => $incident->id
+                ]);
+
+            }
+
+			$reportSex = 'N/A';
             if ($report->gender == 'F')
             {
                 $reportSex = 'Female';

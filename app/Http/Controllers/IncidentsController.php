@@ -1,6 +1,7 @@
 <?php  namespace App\Http\Controllers;
 
 use Blotter\Incident\Incident;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Input;
 
 class IncidentsController extends Controller {
@@ -28,9 +29,12 @@ class IncidentsController extends Controller {
     public function search()
     {
 
+        $startDate = Carbon::parse(Input::get('start-date'))->startOfDay();
+        $endDate = Carbon::parse(Input::get('end-date'))->endOfDay();
+
         return $this->incidents
             ->occurredBetween([
-                Input::get('start-date'), Input::get('end-date')
+                $startDate, $endDate
             ])
             ->violationSection(Input::get('section'))
             ->mappable()

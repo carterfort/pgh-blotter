@@ -22,6 +22,7 @@
 
             <div class="col-sm-6">
 
+
                 <template v-if="loading">
                     Loading...
                 </template>

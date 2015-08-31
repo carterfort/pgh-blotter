@@ -73,7 +73,7 @@
             $('#violations').empty();
             var violations = [];
 
-            $.get("{{ route('api.v1.incidents.search') }}?start-date={{date('Y-m-d', strtotime(' - 3 days '))}}&end-date={{date('Y-m-d')}}", function (result) {
+            $.get("{{ route('api.v1.incidents.search') }}?start-date={{Input::get('start-date', date('Y-m-d', strtotime(' - 3 days ')))}}&end-date={{Input::get('end-date', date('Y-m-d'))}}", function (result) {
 
 
 

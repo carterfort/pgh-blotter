@@ -25,7 +25,8 @@ class Kernel extends ConsoleKernel {
 	 */
 	protected function schedule(Schedule $schedule)
 	{
-		$schedule->command('blotter:fetchWeek')->daily();
+		$schedule->command('blotter:fetchWeek')->dailyAt('01:00');
+		$schedule->command('blotter:geocodeAddresses')->dailyAt('02:00');
 	}
 
 }
